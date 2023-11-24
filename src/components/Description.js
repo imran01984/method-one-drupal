@@ -29,125 +29,99 @@ class Description extends Component {
     })
    }
  
-  render() {
-    const { isCollapsed } = this.state;
-    let displayValue,displayTitle = ""
-    if(this.state.loading === true)
-    {
-        displayValue =<h3>Loading....</h3>
+   render() {
+    const { isCollapsed, data, loading } = this.state;
+  
+    if (loading) {
+      // You might want to render a loading indicator here
+      return <p>Loading...</p>;
     }
-    if(this.state.data != null && this.state.loading === false){
-        displayValue = this.state.data.map((item,index) =>{
-        if(item.attributes.title != null && item.attributes.body.value != null){
-        return( <div key={index}>
-        <p dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(item.attributes.body.processed)}}/>
-        </div> )
-        }
-        
-        else{
-           console.log("Some value is null"); 
-           return null;
-        }
-      })
-      displayTitle = this.state.data.map((item,index) =>{
-        if(item.attributes.title != null && item.attributes.body.value != null){
-        return( <div key={index}>
-        <p className='num'>01</p>
-        <p className='main-heading' dangerouslySetInnerHTML={{__html: item.attributes.title}}/>
-        </div> )
-        }
-        
-        else{
-           console.log("Some value is null"); 
-           return null;
-        }
-
-        
-    
-      })
-  }
+  
     return (
-<div className="middle-content">
-
-{displayTitle}
-<br />
-
-<>
-{displayValue[0]}
-
-</>
-
-
-<br />
-<p className='num'>02</p>
-<p className='main-heading'>Why do you need it?</p>
-<br /><br />
-<p>Description</p>
-<br />
+      <div>
+        {data.map((item, index) => (
+          <div key={index} className="middle-content">
+            <p className='num'>01</p>
+            <p className='main-heading'>What is it?</p>
+            <br /><br />
+            <p dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(item.attributes.field_what_is_it_.value) }} />
+            <p className='num'>02</p>
+            <p className='main-heading'>Why do you need it?</p>
+            <br /><br />
+            <p dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(item.attributes.field_why_do_you_need_it_.value) }} />
+            <br />
 <p className='num'>03</p>
 <p className='main-heading'>Inputs</p>
 <br /><br />
-<p>Description</p>
+<p dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(item.attributes.field_inputs.value) }} />
 <br />
 <p className='num'>04</p>
 <p className='main-heading'>Deliverable(s)</p>
 <br /><br />
-<p>Description</p>
+<p dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(item.attributes.field_deliverable_s_.value) }} />
 <br />
 <p className='num'>05</p>
 <p className='main-heading'>Key considerations</p>
 <br /><br />
-<p>Description</p><br />
-<span style={{ marginRight: '1085px' }}></span>
-<button
-          onClick={this.toggleCollapse}
-          style={{
-            backgroundColor: '#c12be6',
-            color: 'white',
-            padding: '8px 16px',
-            cursor: 'pointer',
-            display: 'flex',
-            alignItems: 'center',
-            border: 'none',
-            marginLeft: '1085px',
-          }}
->
-          {isCollapsed ? <RiArrowDownDoubleFill /> : <RiArrowUpDoubleLine />}
-          {isCollapsed ? 'Expand All' : 'Collapse All'}
-</button>
-<p className={`description ${isCollapsed ? '' : 'expanded'}`} style={{ display: 'flex', alignItems: 'center', width: '1215px' }}>
-          {!isCollapsed && (
-<p className="expanded-content">
-              {}
-<p>
-<bold>Considerations</bold>
-</p>
-</p>
-          )}
-</p>
-<br />
+<p dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(item.attributes.field_key_considerat.value) }} />
+            <button
+              onClick={this.toggleCollapse}
+              style={{
+                backgroundColor: '#c12be6',
+                color: 'white',
+                padding: '8px 16px',
+                cursor: 'pointer',
+                display: 'flex',
+                alignItems: 'center',
+                border: 'none',
+                marginLeft: '1085px',
+              }}
+            >
+              {isCollapsed ? <RiArrowDownDoubleFill /> : <RiArrowUpDoubleLine />}
+              {isCollapsed ? 'Expand All' : 'Collapse All'}
+            </button>
+            <p className={`description ${isCollapsed ? '' : 'expanded'}`} style={{ display: 'flex', alignItems: 'center', width: '1215px' }}>
+              {!isCollapsed && (
+                <p className="expanded-content">
+                  {/* ... Content for expanded section */}
+                  <p>
+                    <strong>Considerations</strong>
+                  </p>
+                  {/* ... */}
+                </p>
+              )}
+            </p>
+            <br />
 <p className='num'>06</p>
 <p className='main-heading'>Best practices</p>
 <br /><br />
-<p>Description</p>
+<p dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(item.attributes.field_bst_practices01.value) }} />
 <br />
 <p className='num'>07</p>
 <p className='main-heading'>Risks & mitigations</p>
 <br /><br />
-<p>Description</p>
+<p dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(item.attributes.field_risks_and_mitigation.value) }} />
 <br />
 <p className='num'>08</p>
 <p className='main-heading'>Assets & tools</p>
 <br /><br />
-<p>Description</p>
+<p dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(item.attributes.field_assets_and_tools.value) }} />
 <br /><br />
 <p className='num'>09</p>
 <p className='main-heading'>Learn more</p>
 <br /><br />
-<p>Description</p>
-</div>
+<p dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(item.attributes.field_learn_more.value) }} />
+          </div>
+        ))}
+      </div>
     );
   }
-}
+  
+       
+ 
+   
+
+  }
+
  
 export default Description;
