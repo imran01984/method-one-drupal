@@ -1,0 +1,292 @@
+/* globals */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Titillium+Web:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* header */
+.header {
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+
+.header a {
+  text-decoration: none;
+  color: black;
+  font-weight: lighter;
+}
+
+.header ul {
+  list-style: none;
+}
+
+
+
+.menu-items li {  
+  padding: 0 1.9rem;
+  transition: background 0.3s ease-in-out;
+}
+
+.menu-items li:hover {
+    color: #ffffff;
+}
+
+/* dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu,
+.menu-right {
+  position: absolute;
+  background: #7b838a;
+  width: 100%;
+  top: 50px;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+.dropdown-menu,
+.menu-right,
+.mega-links a {
+  font-weight: bold;
+  color: #7b838a;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.mega-links a:hover {
+  color: rgb(136, 31, 201); 
+}
+
+.menu-right {
+  top: 0;
+  left: 110%;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.dropdown:hover .dropdown-menu {
+  top: 34px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdown-right:hover .menu-right {
+  left: 100%;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* mega menu  */
+.mega-menu {
+  position: absolute;
+  left: 0;
+  padding-top: 0.6vw;
+  width: 100%;
+  top: 80px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.mega-menu .content {
+  border-top: 2px solid rgb(154, 150, 150);
+  background-color: #ffffff;
+  display: grid;
+  grid-template-columns:  1fr 5fr;
+  gap: 1rem;
+  /* Adjust this value to increase the height */
+}
+
+.content .col1 {
+  display: flex;
+  margin-left: 18vw;
+  flex-direction: column;
+  justify-content: space-between;
+  line-height: 3rem;
+}
+
+.content .col2 {
+  display: flex;
+  margin-left: 1vw; /* Adjust the margin for col2 as needed */
+  flex-direction: column;
+  justify-content: space-between;
+  line-height: 3rem;
+}
+.content .col1 .img-wrapper{
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 20vw;
+  overflow: hidden;
+}
+.content .col2 .img-wrapper {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 20vw;
+  overflow: hidden;
+}
+.content .col1 .img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.content .col2 .img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.content .col1 img {
+  width: 100%;
+  transition: transform 0.3s ease-in-out;
+}
+.content .col2 img {
+  width: 100%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.content .col1 .img-wrapper:hover img{
+  transform: scale(1.1);
+}
+.content .col2 .img-wrapper:hover img {
+  transform: scale(1.1);
+}
+
+.content .col1 h2 {
+  color: #ff652f;
+  font-size: 1.2rem;
+  line-height: 3rem;
+  font-weight: bold;
+}
+.content .col2 h2{
+  color: #ff652f;
+  font-size: 1.2rem;
+  line-height: 3rem;
+  font-weight: bold;
+}
+
+.content .col1 p{
+  line-height: 1.2rem;
+}
+.content .col2 p {
+  line-height: 1.2rem;
+}
+
+.content .col1 .read-more{
+  display: inline-block;
+  padding-top: 1rem;
+  color: #427dad;
+  transition: color 0.3s ease;
+}
+.content .col2 .read-more {
+  display: inline-block;
+  padding-top: 1rem;
+  color: #427dad;
+  transition: color 0.3s ease;
+}
+.mega-links {
+  display: flex;
+  flex-direction: column; /* Add this line to make items appear vertically */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.col1 .mega-links li,
+.col1 .mega-links li a{
+  padding: 0 2rem;
+}
+.col2 .mega-links li,
+.col2 .mega-links li a {
+  padding: 0 2rem;
+}
+
+.menu-items li:hover .mega-menu {
+  top: 50px;
+  opacity: 1; 
+  visibility: visible;
+}
+.content .col1 .read-more:hover {
+  color: #ff652f;
+}
+.content .col2 .read-more:hover {
+  color: #ff652f;
+}
+
+/* section */
+.section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.section h1 {
+  font-family: "Titillium Web", serif;
+  font-weight: 700;
+  line-height: 6vw;
+  color: #427dad;
+  text-transform: uppercase;
+}
+
+.menu-items a {
+  margin-top: 1vw;
+  margin-left: 1.5vw;
+  display: inline-block;
+  transition: transform 0.3s ease;
+  text-decoration: none;
+}
+
+.menu-items.move {
+  display: none;
+}
+
+.menu-items:hover a.header-link {
+  font-weight: bold;
+  color: black;
+}
+
+.menu-items:hover a.move {
+  font-weight: bold;
+  transform: translateX(14.5vw);
+}
+
+.header-part {
+  display: relative;
+  align-items: center;
+}
+
+.part1 {
+  margin-left: 3vw;
+}
+
+.part3 {
+  margin-top: 1vw;
+  position: absolute;
+  margin-left: 89vw;
+  color: #eee;
+}
+

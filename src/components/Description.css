@@ -1,0 +1,36 @@
+.middle-content{
+    margin-left: 100px;
+}
+.main-heading{
+    font-size: 25px;
+    font-weight: 600;
+    padding-top: 20px;
+}
+.num {
+    font-size: 25px;
+    font-weight: 600;
+    color: #c12be6;
+  }
+  .num,.main-heading{
+    display: inline;
+    margin-right: 10px; 
+  }
+  .dot{
+    font-size: 10px;
+    padding-top: 5px;
+    padding-left: 7px;
+    padding-bottom: 5px;
+    padding-right: 7px;
+    background-color: #c12be6;
+    border-radius: 50%;
+    color: white;
+  }
+  .expanded {
+    background-color: rgba(219, 219, 219, 0.5); /* Grey transparent background */
+    padding: 20px; /* Adjust padding as needed */
+    border-left: 4px solid #bb62f7;
+    
+  }
+
+ 
+  

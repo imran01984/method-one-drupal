@@ -1,0 +1,81 @@
+.main-content {
+    height: 450px;
+  }
+  .title{
+    font-size: 60px;
+    font-weight: 100;
+    margin-left: 100px;
+    
+  }
+  .breadcrumb{
+    font-size: 16px;
+    font-weight: lighter;
+    padding-top: 20px;
+    margin-left: 100px;
+    padding-bottom: 20px;
+  }
+  .button{
+  align-items: center;
+  appearance: none;
+  background-color:  #52e0b3;
+  background-image: linear-gradient(1deg,  #52e0b3, 99%);
+  border-radius: 100px;
+  border-width: 0;
+  box-shadow: none;
+  box-sizing: border-box;
+  color: black;
+  display: inline-flex;
+  font-size: 14px;
+  height: auto;
+  justify-content: center;
+  line-height: 1.5;
+  padding: 6px 20px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color .2s,background-position .2s;
+  touch-action: manipulation;
+  vertical-align: top;
+  margin-left: 100px;
+  }
+  .phase{
+    font-weight: 700;
+    margin-left: 100px;
+  }
+  .phasenames{
+    font-weight: lighter;
+    font-size: 16px;
+    margin-left: 100px;
+    padding-top: 10px;
+  }
+  .phasenames-container {
+    display: flex; /* Display "phasenames" in a single line */
+    margin-bottom: 10px; /* Adjust spacing between "phasenames" and progress bars */
+  }
+  
+  .phasenames {
+    flex: 1; /* Distribute available space evenly among "phasenames" */
+    margin-right: 20px; /* Adjust spacing between "phasenames" */
+  }
+  
+  .progress-bars-container {
+    display: flex; /* Display progress bars in a single line below "phasenames" */
+    align-items: center; /* Center align the progress bars vertically */
+    margin-bottom: 10px; /* Adjust spacing between progress bars and other content */
+  }
+  
+  .progress-bar, .pg {
+    flex: 1; /* Distribute available space evenly among progress bars */
+    background-color: #52e0b3; /* Color of the progress bar */
+    height: 6px; /* Height of the progress bar */
+    width: 0; /* The initial width is 0% (will be adjusted dynamically) */
+    transition: width 0.2s; /* Transition for smooth width change */
+    margin-right: 5px; /* Add a small margin between progress bars */
+  }
+  .pg{
+    margin-left: 100px;
+  }
+  .arrow{
+    margin-block: auto;
+  }
+  

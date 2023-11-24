@@ -1,0 +1,25 @@
+.menuItem1 {
+  position: relative;
+}
+
+.menuItem1:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 6px; /* Adjust the width as needed */
+  height: 100%;
+  background: linear-gradient(to bottom, #df4ff5, #5692f3) /* Change the color to your desired color */
+}
+
+.menu-link {
+  text-decoration: none;
+  color: #333; /* Default text color */
+}
+
+.menuItem1:hover .menu-link {
+  color: black; /* Change the text color when hovering */
+}
+a {
+  text-decoration: none !important;
+}

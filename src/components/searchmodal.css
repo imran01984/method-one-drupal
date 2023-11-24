@@ -1,0 +1,51 @@
+/* YourComponent.css */
+.white-button {
+    border: white;
+    background: none;
+    /* Add other styles as needed */
+  }
+
+  .white-button:hover {
+    border: white;
+    
+    /* Add other styles as needed */
+  }
+  .btn-new {
+    color: #fff;
+    background-color: #007BFF;
+    border-radius: 0;
+    border-color: #007BFF;
+  } 
+  
+  .btn-new:hover, .btn-new:active {
+    color: #fff;
+    
+    background-color: #005de1;
+    border-color: #005de1;
+  }
+  
+  .btn-new.focus, .btn-new:focus {
+    color: #fff;
+    background-color: #005de1;
+    border-color: #005de1;
+    box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 50%);
+  }
+  ul {
+    display: flex;
+    list-style: none;
+  }
+  .circle-container {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #3498db; /* Set your desired background color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(130, 14, 14); /* Set the text color */
+    font-weight: bold;
+    font-size: 16px; /* Adjust the font size as needed */
+  }
+  .top-head{
+    list-style: none;
+  }

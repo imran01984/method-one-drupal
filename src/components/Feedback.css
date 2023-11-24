@@ -1,0 +1,27 @@
+.feedback-button {
+   margin-left: 1000px;
+   background-color: #8141c5; 
+  border: none;
+  color: white;
+  padding: 20px 36px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: -50px;
+  }
+  .feedback{
+  
+    background: linear-gradient(to bottom,white, hsl(275, 83%, 88%));
+    height: 200px;
+  }
+.part12{
+    margin-left: 200px;
+    font-weight: 400;
+    font-size: large;
+    padding-top: 80px;
+
+}
+.part2{
+    margin-top: -22px;
+}
